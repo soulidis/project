@@ -10,7 +10,7 @@
     <body>
         <h1>Bike Rental</h1>
         
-        <a href="login.jsp"><img src="login.jpg" height="80" width="100"></a><br><br>
+        <a href="loginform.jsp"><img src="login.jpg" height="80" width="100"></a><br><br>
         <a href="regform.jsp"><img src="register.jpg" height="80" width="100"></a>
         
 </body>

@@ -18,12 +18,17 @@ String em=request.getParameter("email");
     
 
         
+            
+
             Connection connection = null; 
             Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes","root", "mysqlaok");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes","root", "");
             if(!connection.isClosed())
                  out.println("Successfully connected to " + "MySQL server using TCP/IP...");
             Statement st=connection.createStatement(); 
+            
+            session.setAttribute("num",ph);
+
             int i = st.executeUpdate("insert into users(username,password,firstname,lastname,phone,email) values('" + u + "','" + p + "','" + fn + "','" + ln + "','" + ph + "','" + em + "')");
             if(i>0){
                     response.sendRedirect("index.jsp");
