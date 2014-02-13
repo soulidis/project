@@ -11,7 +11,7 @@
  
     
     Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes","root", "");
+    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes","root", "****");
     Statement st = con.createStatement();
     ResultSet rs;
     

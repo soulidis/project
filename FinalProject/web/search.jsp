@@ -1,35 +1,22 @@
+<%-- 
+    Document   : search
+    Created on : Jan 15, 2014, 6:06:49 PM
+    Author     : Angelos
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html> 
 
-
+<html>
     <head>
-        <link rel="stylesheet" href="css/main.css">
-        
-        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Bike Rental</title>
-        
-        
-        
+         <link rel="stylesheet" href="css/main.css">
+        <title>Search a bike</title>
     </head>
     <body>
-        <div id='titlos'>
-        <h1>Bike Rental</h1>
-        </div>
-        
-        
-        
-        <a href="loginform.jsp">Login</a><br><br>
-          
-        <a href="regform.jsp">Register</a>
-        
-        <br><br><br><br><br><br><br><br>
-        
-<div class="pinakas1">
-<form method="post" action="indexsearch.jsp">
+        <form method="post" action="searchdb.jsp">
             <center>
-            <table bgcolor="#996633" border="1" width="30%" cellpadding="5">
+            <table border="1" width="30%" cellpadding="5">
                 <thead>
                     <tr>
                         <th colspan="2">Search a bike</th>
@@ -55,13 +42,7 @@
             </table>
             </center>
         </form>
-  
-</div>   
-  
         
-</body>
-    
-
-
-
+        
+    </body>
 </html>

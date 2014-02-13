@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+
+body {
+ position: relative;
+ height : auto;
+ padding-bottom: 3%;
+min-width:900px;
+background-image:url('../images/pic1.jpg');
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+ background-size: cover;
+color:#FF0000;
+
+  font: 13.34px Arial, sans-serif;
+  font-size: medium;
+  text-align: left;
+}
+
+#titlos {
+
+	text-align:center;
+	color:#996633;
+}
+
+.buttons{
+
+
+}
+.pinakas1 {
+
+color:#C0C0C0;
+	position:center;
+font-weight:bold;
+       padding-top:8cm;
+
+}
+
+.pinakas2 {
+
+
+	
+font-weight:bold;
+       padding-top:1cm;
+
+}

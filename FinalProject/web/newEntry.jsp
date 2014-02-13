@@ -8,9 +8,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+      
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" href="css/main.css">
         <title>Bike Entry</title>
     </head>
+    
+     <%
+    if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
+%>
+You are not logged in<br/>
+<a href="loginform.jsp">Please Login</a>
+<%} else {
+%>
+    
     <body>
         <form method="post" action="entrytodb.jsp">
             <center>
@@ -23,15 +34,19 @@
                 <tbody>
                     <tr>
                         <td>Bike type</td>
-                        <td><input type="text" name="btype" value="" /></td>
+                        <td><input type="text" name="btype" value="" required=""/></td>
                     </tr>
                     <tr>
                         <td>City</td>
-                        <td><input type="text" name="ucity" value="" /></td>
+                        <td><input type="text" name="ucity" value="" required=""/></td>
                     </tr>
                     <tr>
-                        <td>Available at</td>
-                        <td><input type="text" name="atime" value="" /></td>
+                        <td>Available at (HH : mm)</td>
+                        <td><input type="text" name="atime" value="" required=""/></td>
+                    </tr>
+                    <tr>
+                        <td>Photo URL</td>
+                        <td><input type="text" name="bphoto" value="" required=""/></td>
                     </tr>
                         <td><input type="submit" value="Submit" /></td>
                         <td><input type="reset" value="Reset" /></td>
@@ -44,3 +59,7 @@
         
     </body>
 </html>
+
+
+
+<%}%>

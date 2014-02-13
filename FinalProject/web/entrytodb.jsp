@@ -17,6 +17,7 @@
 String bt=request.getParameter("btype"); 
 String uc=request.getParameter("ucity"); 
 String at=request.getParameter("atime"); 
+String bp=request.getParameter("bphoto");
 String u=session.getAttribute("userid").toString();
 
 
@@ -24,9 +25,8 @@ String u=session.getAttribute("userid").toString();
    
             Connection connection = null; 
             Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes","root", "");
-            if(!connection.isClosed())
-                 out.println("Successfully connected to " + "MySQL server using TCP/IP...");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes","root", "****");
+          
             Statement st=connection.createStatement(); 
            
             Integer number = (Integer) session.getAttribute("phone1");
@@ -35,7 +35,7 @@ String u=session.getAttribute("userid").toString();
             
             
             
-           int i = st.executeUpdate("insert into entries(owner,biketype,city,phone,availableTime) values('" + u + "','" + bt + "','" + uc + "','" + number + "','" + at + "')");
+           int i = st.executeUpdate("insert into entries(owner,biketype,city,phone,availableTime,photo) values('" + u + "','" + bt + "','" + uc + "','" + number + "','" + at + "','" + bp + "')");
             
            if(i>0){
                     response.sendRedirect("welcome.jsp");

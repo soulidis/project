@@ -9,12 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" href="css/main.css">
         <title>JSP Example</title>
     </head>
     <body>
-        <form method="post" action="loginvalid.jsp">
+        <form method="post" action="login">
             <center>
-            <table border="1" width="30%" cellpadding="3">
+            <table bgcolor="#996633" border="1" width="30%" cellpadding="3">
                 <thead>
                     <tr>
                         <th colspan="2">Login</th>
