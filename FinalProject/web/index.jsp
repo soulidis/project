@@ -23,6 +23,7 @@
         <a href="loginform.jsp">Login</a><br><br>
           
         <a href="regform.jsp">Register</a>
+     
         
         <br><br><br><br><br><br><br><br>
         

@@ -13,6 +13,19 @@
          <link rel="stylesheet" href="css/main.css">
         <title>Search a bike</title>
     </head>
+    
+    <%
+    if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
+%>
+You are not logged in<br/>
+<a href="loginform.jsp">Please Login</a>
+<%} else {
+%>
+   
+    
+    
+    
+    
     <body>
         <form method="post" action="searchdb.jsp">
             <center>
@@ -46,3 +59,7 @@
         
     </body>
 </html>
+
+
+
+<%}%>

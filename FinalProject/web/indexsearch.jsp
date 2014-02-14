@@ -12,11 +12,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
          <link rel="stylesheet" href="css/main.css">
-       
+          <title>Your results</title>
     </head>
     
     <%
     
+    request.setCharacterEncoding("UTF-8");    
+        
     String bt = request.getParameter("btype");    
     String uc = request.getParameter("ucity");
     String at = request.getParameter("atime");
@@ -26,7 +28,7 @@
     
         Connection connection = null; 
             Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes","root", "****");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes?useUnicode=true&characterEncoding=UTF-8","root", "****");
             
             Statement st=connection.createStatement(); 
            
@@ -70,7 +72,6 @@
            String q1=rs.getString(2);
            String q2=rs.getString(3);
            String q3=rs.getString(4);
-           int q4=rs.getInt(5);
            String q5=rs.getString(6);
            String q6=rs.getString(7);
            
@@ -85,7 +86,6 @@
             <th>OWNER</th>
             <th>BIKE TYPE</th>
             <th>CITY</th>
-            <th>PHONE</th>
             <th>AVAILABLE TIME</th>
             <th>PHOTO</th>
             
@@ -95,7 +95,6 @@
         <TD> <%=q1%>  </TD>
         <TD> <%=q2%>  </TD>
         <TD> <%=q3%>  </TD>
-        <TD> <%=q4%>  </TD>
         <TD> <%=q5%>  </TD>
         <TD> <a href="<%=q6%>" target="_blank">See the bike?</a> </TD>    
         

@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
          <link rel="stylesheet" href="css/main.css">
-        <title>JSP Example</title>
+        <title>Login</title>
     </head>
     <body>
         <form method="post" action="login">

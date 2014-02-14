@@ -12,8 +12,11 @@
 <html>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      <link rel="stylesheet" href="css/main.css">
+      <title>Your results</title>
     
 <% 
+    
+ request.setCharacterEncoding("UTF-8");      
     
 String bt=request.getParameter("btype"); 
 String uc=request.getParameter("ucity"); 
@@ -25,7 +28,7 @@ String u=session.getAttribute("userid").toString();
    
             Connection connection = null; 
             Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes","root", "****");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes?useUnicode=true&characterEncoding=UTF-8","root", "****");
             
             Statement st=connection.createStatement(); 
            

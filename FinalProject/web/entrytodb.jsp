@@ -13,6 +13,8 @@
     <body>
         <h1>Connection status</h1>
 <% 
+   
+request.setCharacterEncoding("UTF-8");      
     
 String bt=request.getParameter("btype"); 
 String uc=request.getParameter("ucity"); 
@@ -25,7 +27,7 @@ String u=session.getAttribute("userid").toString();
    
             Connection connection = null; 
             Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes","root", "****");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes?useUnicode=true&characterEncoding=UTF-8","root", "****");
           
             Statement st=connection.createStatement(); 
            

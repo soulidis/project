@@ -21,7 +21,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
          <link rel="stylesheet" href="css/main.css">
-        <title>Welcome Page</title>
+        <title>Welcome</title>
     </head>
     
     
@@ -47,7 +47,7 @@ You are not logged in<br/>
     ResultSet rs=null;
     Connection connection = null; 
             Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes","root", "****");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bikes","root", "mysqlaok");
             
             Statement st=connection.createStatement(); 
             
