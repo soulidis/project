@@ -13,6 +13,8 @@
         
         
     </head>
+    
+    
     <body>
         <div id='titlos'>
         <h1>Bike Rental</h1>

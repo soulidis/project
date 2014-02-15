@@ -40,7 +40,7 @@
                     </tr>
                     <tr>
                         <td>Email</td>
-                        <td><input type="text" name="email" value="" required=""/></td>
+                        <td><input type="email" name="email" value="" required=""/></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="Submit" /></td>
